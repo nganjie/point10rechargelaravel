@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Lexend-Regular";
+    src: url(/assets/fonts/Lexend-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Lexend-Medium";
+    src: url(/assets/fonts/Lexend-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Lexend-Thin";
+    src: url(/assets/fonts/Lexend-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Lexend-Light";
+    src: url(/assets/fonts/Lexend-Light.ttf);
+}
+
+*,
+*::after,
+*::before {
+    font-family: "Lexend-Regular";
+}
+body {
+    /* font-size: 1.1rem; */
+}
+.pageHide {
+    transform: translateX(-100%) !important;
+}
