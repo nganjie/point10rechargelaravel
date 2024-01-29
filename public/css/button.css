@@ -1,0 +1,67 @@
+/* Button Styles */
+
+.button {
+  display: flex !important;
+  min-height: 40px !important;
+  border: 2px solid #42da82 !important;
+  margin: 20px 20px 20px 20px !important;
+  color: #42da82;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  font-size: 0.8em !important;
+  letter-spacing: 1.5px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 0.5rem 1rem !important ;
+}
+
+.button .text_btn {
+  color: #42da82;
+  text-decoration: none !important;
+  letter-spacing: 1px !important;
+}
+/* Second Button */
+
+.button {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+}
+
+.button .text_btn {
+  position: relative !important;
+  transition: all 0.35s ease-Out !important;
+}
+
+.button .slide {
+  width: 100% !important;
+  height: 100% !important;
+  left: -300px !important;
+  background: #42da82 !important;
+  position: absolute !important;
+  transition: all 0.35s ease-Out !important;
+  bottom: 0 !important;
+}
+.button.green_btn .slide {
+  background-color: #002c85 !important;
+}
+.button:hover .slide {
+  left: 0 !important;
+}
+
+.button:hover .text_btn {
+  color: white;
+}
+
+.button.green_btn {
+  border-color: #002c85 !important;
+  color: #002c85;
+}
+.button.green_btn .text_btn {
+  color: #002c85;
+}
+
+.button.green_btn:hover .text_btn {
+  color: white !important;
+}

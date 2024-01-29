@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "LexendBold";
+  src: url(../media/fonts/Lexend-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Lexend-Regular";
+  src: url(../media/fonts/Lexend-Regular.ttf);
+}
+.bundle_section_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  max-width: 1200px;
+  padding: 1rem !important;
+  margin: 1rem auto !important;
+}
+
+#filter_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 300px;
+  padding: 1rem !important;
+  margin: 1rem;
+  align-items: flex-start;
+}
+
+#filter_form .form_item {
+  display: flex;
+
+  gap: 1rem !important;
+  flex-direction: column !important;
+}
+#price,
+#qte {
+  max-width: 80%;
+  margin: 1rem 0rem !important;
+  width: 100% !important;
+}
+a.bundle_item:hover,
+.bundle_item:hover {
+  text-decoration: none !important;
+  /* background-color: #f1f5f8 !important; */
+}
+#categorie {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0.5rem !important;
+}
+.bundle_item {
+  width: fit-content;
+  max-width: 380px !important;
+  text-decoration: none !important;
+  display: flex !important;
+  justify-content: center;
+  font-size: 0.9rem;
+  align-items: center;
+  padding: 0 !important;
+  margin: 0;
+  height: 100% !important;
+  max-width: 450px;
+  width: 100%;
+}
+.bundle_item_content {
+  /* color: white; */
+  text-transform: capitalize;
+  background-color: white !important;
+
+  /* background-color: #002c85; */
+  border: 2px solid #002c85;
+  font-family: "Lexend-Regular";
+  padding: 1rem !important;
+  border-radius: 5px;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+.bundle_item .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.bundle_name {
+  font-family: "Lexend-ExtraBold";
+  color: black;
+}
+.bundle_description {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+.sjow_bundle_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem !important;
+}
+
+@media screen and (min-width: 768px) {
+  .bundle_section_wrapper {
+    flex-direction: row;
+    margin: 1rem auto !important;
+  }
+  #filter_form {
+    flex: 1;
+  }
+  .bundle_section_wrapper > :nth-child(2) {
+    flex: 3;
+  }
+}

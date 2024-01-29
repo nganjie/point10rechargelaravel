@@ -1,0 +1,16 @@
+.notification-label {
+  display: inline-flex;
+  border-radius: 50%;
+  /* width: 30px;
+  height: 30px; */
+  color: #fff;
+  padding: .5rem .7rem !important;
+  font-size: 1rem;
+  text-align: center;
+}
+.notification-label.notification-label-red {
+  background: #c62828;
+}
+.notification-label.notification-label-blue {
+  background: #0d47a1;
+}

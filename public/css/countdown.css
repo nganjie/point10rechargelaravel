@@ -1,0 +1,31 @@
+/* general styling */
+:root {
+  --smaller: 0.75;
+}
+
+#container_count_down {
+  color: #333;
+  background-color: #ffd54f;
+  padding: 1rem !important;
+  margin: 1rem !important;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#temps .times {
+  display: block;
+  font-size: 2.5rem;
+}
+
+#container_count_down li {
+  display: inline-block;
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}

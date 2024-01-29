@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "Lexend-Regular";
+  src: url(../../media/fonts/Lexend-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lexend-ExtraLight";
+  src: url(../../media/fonts/Lexend-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Lexend-ExtraBold";
+  src: url(../../media/fonts/Lexend-ExtraBold.ttf);
+}
+
+*,
+*::after,
+*::after {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  font-family: "Lexend-ExtraLight", system-ui, -apple-system, BlinkMac,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  transition: all 0.3s !important;
+}
+
+select {
+  padding: 0.5rem !important;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+/* banner */
+body {
+  margin: auto !important;
+}
+button {
+  border: none !important;
+  background: none !important;
+  color: inherit;
+  cursor: pointer !important;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+a:visited {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: underline !important;
+}
+image {
+  object-fit: contain !important;
+}
+
+.admin_wrapper {
+  display: flex;
+}
+.content_wrapper {
+  background-color: #bdd7fb;
+  flex: 1;
+  width: 100%;
+  margin-left: 250px !important;
+  min-height: 100vh !important;
+}
+.sidebar {
+  background-color: #002c85;
+  padding: 0.5rem !important;
+  padding-top: 1rem !important;
+  color: white;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0px;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar:nth-child(1) {
+  border-bottom: 1px solid white !important;
+}
+
+.admin_wrapper.hidden_sidebar .sidebar {
+  left: -250px !important;
+}
+.admin_wrapper.hidden_sidebar .content_wrapper {
+  margin-left: 0px !important;
+}
+
+.list_nav li {
+  font-family: "Lexend-ExtraBold";
+  list-style-type: none;
+  padding: 0.5rem !important;
+  margin: 0.5rem !important;
+}
+.list_nav li.active,
+.list_nav li:hover {
+  background-color: #42da82;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #42da82;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.list_nav a {
+  text-decoration: none !important;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+.new_btn {
+  font-weight: bold;
+  padding: 0.4rem 1rem !important;
+  color: white !important;
+  border-radius: 4px;
+  background-color: #42da82;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.header_admin {
+  display: flex;
+  justify-content: space-between !important;
+  padding: 0.5rem !important;
+  align-items: center;
+  background-color: white;
+  gap: 1rem;
+  width: 100% !important;
+}
+.resume_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem !important;
+}
+.review_item {
+  width: 300px;
+  text-transform: capitalize;
+  background-color: #002c85 !important;
+  border-radius: 4px;
+  color: white !important;
+  padding: 1rem !important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.review_item > * {
+  margin: 0.5rem 0rem !important;
+}
+.review_item > :nth-child(2) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* new bundle */
+.register_new_bundle_section {
+  margin: 1rem auto !important;
+  width: 100%;
+  max-width: 700px;
+  min-height: 80vh;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.title {
+  text-transform: uppercase;
+  margin: 1rem !important;
+  text-align: center;
+}
+.group_input_register {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem !important;
+}
+#register_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.title_dash {
+  display: flex;
+  gap: 1rem;
+}
+.title_dash :nth-child(1) {
+  font-size: 2rem !important;
+}
+
+/* ACTIVE CALORIES  */
+
+.review_item.active-calories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: black !important;
+  background-color: rgb(214, 227, 248) !important;
+  padding: 1rem 10px !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
+}
+
+.active-calories h1 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.active-calories-container {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.calories-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.calories-content p {
+  font-size: 1rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 10px 0;
+  /* width: 200px; */
+}
+
+.box h2 {
+  position: relative;
+  text-align: center;
+  font-size: 1.25rem;
+  color: rgb(91, 95, 111);
+  font-weight: 600;
+}
+
+.box h2 small {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.circle {
+  position: relative;
+  width: 80px;
+  aspect-ratio: 1/1;
+  background: conic-gradient(
+    from 0deg,
+    #590b94 0%,
+    #590b94 0% var(--i),
+    #b3b2b2 var(--i),
+    #b3b2b2 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  background-color: rgb(214, 227, 248);
+  border-radius: 50%;
+}
+/* end active colories */
+
+/* data dundle */
+
+.details_bundles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.details_bundles img {
+  border-radius: 50%;
+}
+.details_bundles > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: gray;
+}
+.details_bundles > :nth-child(2) strong {
+  color: black;
+  padding: 5rem 0rem !important;
+}
+.title_section {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 3rem 0.5rem !important;
+}
+
+@media screen and (min-width: 768px) {
+}
