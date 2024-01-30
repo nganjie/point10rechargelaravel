@@ -5,15 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Taille extends Model
+class Puce extends Model
 {
     use HasFactory;
-    public $table="taille";
+    public $table="puce";
 
-    public function forfait(){
-        return $this->hasMany(Forfait::class);
-    }
+    
 }
-
-
 ?>

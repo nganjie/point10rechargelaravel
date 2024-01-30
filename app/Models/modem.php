@@ -5,15 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Taille extends Model
+class Modem extends Model
 {
     use HasFactory;
-    public $table="taille";
+    public $table="modem";
 
-    public function forfait(){
-        return $this->hasMany(Forfait::class);
-    }
+    
 }
-
-
 ?>

@@ -25,7 +25,7 @@ Route::prefix("/visiteurs")->name("visiteurs.")->controller(VisiteurController::
     Route::get('/message-client', 'client_message')->name("client_message");
     Route::get('/deconnexion', 'deconnexion')->name("deconnexion");
     Route::post('/message-client', 'messages_create')->name("messages_create");
-    Route::post('/enregistrer_message_contact', 'enregistrer_message_contact');
+    Route::post('/contact', 'enregistrer_message_contact')->name("enregistrer_message_contact");
 });
 Route::prefix("admin/")->name("admin.")->controller(Controller::class)->group(function (){
     Route::get('/dashbord', '');

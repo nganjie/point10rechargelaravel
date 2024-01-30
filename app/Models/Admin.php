@@ -5,11 +5,14 @@ namespace App\Models;
 use DateTime;
 use App\Controllers\Securisation;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
-    use HasFactory;
+    use HasFactory, HasFactory, Notifiable;
+    public $table="admin";
     public function utilisateur(){
         return $this->belongsTo(Utilisateur::class);
     }

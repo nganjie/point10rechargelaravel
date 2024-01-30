@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use App\Models\Client;
 use App\Models\Forfait;
 use App\Models\Message;
@@ -12,6 +13,9 @@ use App\Models\CommandeForfait;
 use App\Http\Requests\MessageContactRequest;
 use Symfony\Component\Mime\MessageConverter;
 use App\Http\Requests\MessageConctactRequest;
+use App\Mail\ContactMail;
+use App\Notifications\ContactRequestNotification;
+use Illuminate\Support\Facades\Mail;
 
 class visiteurController extends Controller
 {
@@ -48,7 +52,11 @@ class visiteurController extends Controller
         return header("LOCATION: contacts?valid={$valid}");
         //return view("visiteurs.contacts",compact('valid'));
        }*/
+       $admin =Admin::first();
+       
        $messageContact = MessageContact::create($req->validated());
+       $admin->notify(new ContactRequestNotification($messageContact,$admin->email));
+       //Mail::send(new ContactMail($messageContact));
        //dd($messageContact);
        return redirect()->route("visiteurs.contact")->with("success","Votre message à bien été envoyer");
        
