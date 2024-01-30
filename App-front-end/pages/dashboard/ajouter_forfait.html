@@ -21,7 +21,7 @@
                 <!-- Page Sidebar -->
                 <nav
                     id="page-sidebar"
-                    class="fixed bottom-0 start-0 top-0 z-50 flex h-full w-full flex-col border-neutral-600 bg-white transition-transform duration-300 ease-out lg:w-64 ltr:lg:border-r-2 rtl:lg:border-l-2"
+                    class="fixed bottom-0 start-0 top-0 z-40 flex h-full w-full flex-col border-neutral-600 bg-white transition-transform duration-300 ease-out lg:w-64 ltr:lg:border-r-2 rtl:lg:border-l-2"
                     x-bind:class="{
                 'ltr:-translate-x-full rtl:translate-x-full': !mobileSidebarOpen,
                 'translate-x-0': mobileSidebarOpen,
@@ -105,8 +105,8 @@
                             </nav>
                             <nav class="space-y-1">
                                 <a
+                                    class="group flex items-center gap-2 border-y border-transparent px-5 py-1 font-medium hover:border-neutral-600 hover:bg-blue-100 active:bg-blue-50"
                                     href="javascript:void(0)"
-                                    class="group flex items-center gap-2 border-y border-neutral-600 bg-blue-100 px-5 py-1 font-medium"
                                 >
                                     <span
                                         class="flex flex-none items-center text-neutral-600 group-hover:-rotate-12 group-hover:text-blue-700 group-active:rotate-0"
@@ -193,7 +193,7 @@
                                 </a>
                                 <a
                                     href="javascript:void(0)"
-                                    class="group flex items-center gap-2 border-y border-transparent px-5 py-1 font-medium hover:border-neutral-600 hover:bg-blue-100 active:bg-blue-50"
+                                    class="group flex items-center gap-2 border-y border-neutral-600 bg-blue-100 px-5 py-1 font-medium"
                                 >
                                     <span
                                         class="flex flex-none items-center text-neutral-600 group-hover:-rotate-12 group-hover:text-blue-700 group-active:rotate-0"
@@ -540,10 +540,8 @@
                                 <h1 class="mb-2 text-3xl">Bienvenu Ivan</h1>
                             </div>
                             <div class="flex flex-none gap-2">
-                                <button
-                                    data-modal-target="AddNewModem"
-                                    data-modal-toggle="AddNewModem"
-                                    type="button"
+                                <a
+                                    href="/pages/dashboard/ajouter_forfait.html"
                                     class="flex p-2 px-3 rounded-full justify-center items-center gap-2 border border-blue-500 text-blue-500"
                                 >
                                     <svg
@@ -558,8 +556,8 @@
                                             d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
                                         ></path>
                                     </svg>
-                                    <span>Ajouter un modem</span>
-                                </button>
+                                    <span>Ajouter un Forfait</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -577,17 +575,17 @@
                                 class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
                             >
                                 <h3 class="text-lg font-semibold text-gray-900">
-                                    Créer un nouveau modem
+                                    Créer un nouveau Forfait
                                 </h3>
                             </div>
                             <!-- Modal body -->
                             <form class="p-4 md:p-5">
-                                <div class="grid gap-4 mb-4 grid-cols-2">
-                                    <div class="col-span-2">
+                                <div class="flex flex-col gap-4 mb-4">
+                                    <div class="">
                                         <label
                                             for="name"
                                             class="block mb-2 text-sm font-medium text-gray-900"
-                                            >Marque :
+                                            >Nom :
                                         </label>
                                         <input
                                             type="text"
@@ -597,27 +595,12 @@
                                             required=""
                                         />
                                     </div>
-                                    <div class="col-span-2">
-                                        <label
-                                            for="name"
-                                            class="block mb-2 text-sm font-medium text-gray-900"
-                                            >Batterie :
-                                        </label>
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            id="name"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                            required=""
-                                        />
-                                    </div>
-                                </div>
-                                <div class="col-span-2 sm:col-span-1">
-                                    <div class="col-span-2 sm:col-span-1">
+
+                                    <div class="">
                                         <label
                                             for="category"
                                             class="block mb-2 text-sm font-medium text-gray-900"
-                                            >Type de reseau :
+                                            >Type de forfait :
                                         </label>
                                         <select
                                             id="category"
@@ -626,16 +609,27 @@
                                             <option selected="">
                                                 Select category
                                             </option>
-                                            <option value="TV">
-                                                TV/Monitors
-                                            </option>
+                                            <option value="TV">Blue Mo</option>
                                             <option value="PC">PC</option>
-                                            <option value="GA">
-                                                Gaming/Console
-                                            </option>
-                                            <option value="PH">Phones</option>
+                                            <option value="GA">Yoome Mo</option>
                                         </select>
                                     </div>
+
+                                    <label
+                                        for="category"
+                                        class="block mb-2 text-sm font-medium text-gray-900"
+                                        >Type de reseau :
+                                    </label>
+                                    <select
+                                        id="category"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                    >
+                                        <option selected="">
+                                            Select category
+                                        </option>
+                                        <option value="TV">Camtel</option>
+                                        <option value="GA">Yoome</option>
+                                    </select>
                                     <div class="col-span-2 sm:col-span-1 mt-3">
                                         <label
                                             for="price"
@@ -650,19 +644,18 @@
                                             required=""
                                         />
                                     </div>
-                                </div>
-                                <div class="col-span-2 sm:col-span-1 mt-3">
-                                    <label
-                                        class="block mb-2 text-sm font-medium text-gray-900"
-                                        for="user_avatar"
-                                        >Choisir une image du modem</label
-                                    >
-                                    <input
-                                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 mb-2"
-                                        aria-describedby="user_avatar_help"
-                                        id="user_avatar"
-                                        type="file"
-                                    />
+
+                                    <div class="col-span-2 sm:col-span-1 mt-3">
+                                        <label
+                                            for="price"
+                                            class="block mb-2 text-sm font-medium text-gray-900"
+                                            >Description :
+                                        </label>
+                                        <textarea
+                                            required
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        ></textarea>
+                                    </div>
                                 </div>
 
                                 <button
@@ -681,7 +674,7 @@
                                             clip-rule="evenodd"
                                         ></path>
                                     </svg>
-                                    Ajouter le modem
+                                    Ajouter le Forfait
                                 </button>
                             </form>
                         </div>
@@ -704,12 +697,12 @@
                                 >
                                     <div class="grow">
                                         <h4 class="mb-0.5 text-xl text-black">
-                                            Modems déjà ajoutés
+                                            Forfaits déjà ajoutés
                                         </h4>
                                         <h5
                                             class="text-sm font-medium text-neutral-500"
                                         >
-                                            25 modems
+                                            25 Forfaits
                                         </h5>
                                     </div>
                                 </div>
@@ -785,19 +778,27 @@
                                                 >
                                                     <button
                                                         class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                                                        data-modal-target="SeeModemDetails"
-                                                        data-modal-toggle="SeeModemDetails"
+                                                        data-modal-target="SeeForfaitDetails"
+                                                        data-modal-toggle="SeeForfaitDetails"
                                                         type="button"
                                                     >
                                                         Voir
                                                     </button>
 
                                                     <a
-                                                        href="./modifier_modem.html"
+                                                        href="/pages/dashboard/modifier_forfait.html"
                                                         class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
                                                     >
                                                         Modifier
                                                     </a>
+                                                    <button
+                                                        data-modal-target="DeleteBundleButton"
+                                                        data-modal-toggle="DeleteBundleButton"
+                                                        class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
+                                                        type="button"
+                                                    >
+                                                        Supprimer
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <tr
@@ -822,19 +823,28 @@
                                                 >
                                                     <button
                                                         class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                                                        data-modal-target="SeeModemDetails"
-                                                        data-modal-toggle="SeeModemDetails"
+                                                        data-modal-target="SeeForfaitDetails"
+                                                        data-modal-toggle="SeeForfaitDetails"
                                                         type="button"
                                                     >
                                                         Voir
                                                     </button>
 
                                                     <a
-                                                        href="./modifier_modem.html"
                                                         class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
+                                                        href="/pages/dashboard/modifier_forfait.html"
                                                     >
                                                         Modifier
                                                     </a>
+
+                                                    <button
+                                                        data-modal-target="DeleteBundleButton"
+                                                        data-modal-toggle="DeleteBundleButton"
+                                                        class="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
+                                                        type="button"
+                                                    >
+                                                        Supprimer
+                                                    </button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -892,7 +902,7 @@
 
                         <!-- Main modal -->
                         <div
-                            id="SeeModemDetails"
+                            id="SeeForfaitDetails"
                             tabindex="-1"
                             aria-hidden="true"
                             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -911,12 +921,12 @@
                                         <h3
                                             class="text-xl font-semibold text-gray-900 dark:text-white"
                                         >
-                                            Détail Modem
+                                            Détail Forfait
                                         </h3>
                                         <button
                                             type="button"
                                             class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                            data-modal-hide="SeeModemDetails"
+                                            data-modal-hide="SeeForfaitDetails"
                                         >
                                             <svg
                                                 class="w-3 h-3"
@@ -944,102 +954,95 @@
                                             class="bg-white overflow-hidden shadow rounded-lg border"
                                         >
                                             <div
-                                                class="border-t border-gray-200 px-4 py-5 sm:p-0"
+                                                class="mb-8 w-full max-w-[400px]"
                                             >
-                                                <dl
-                                                    class="sm:divide-y sm:divide-gray-200"
+                                                <div
+                                                    class="bg-white overflow-hidden shadow rounded-lg border"
                                                 >
                                                     <div
-                                                        class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+                                                        class="border-t border-gray-200 px-4 py-5 sm:p-0"
                                                     >
-                                                        <dt
-                                                            class="text-sm font-medium text-gray-500"
+                                                        <dl
+                                                            class="sm:divide-y sm:divide-gray-200"
                                                         >
-                                                            Nom :
-                                                        </dt>
-                                                        <dd
-                                                            class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-                                                        >
-                                                            Modem MIFI
-                                                        </dd>
-                                                    </div>
+                                                            <div
+                                                                class="py-3 flex gap-2 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+                                                            >
+                                                                <dt
+                                                                    class="text-sm font-medium text-gray-500"
+                                                                >
+                                                                    Nom :
+                                                                </dt>
+                                                                <dd
+                                                                    class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+                                                                >
+                                                                    Blue Night
+                                                                </dd>
+                                                            </div>
 
-                                                    <div
-                                                        class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
-                                                    >
-                                                        <dt
-                                                            class="text-sm font-medium text-gray-500"
-                                                        >
-                                                            Marque :
-                                                        </dt>
-                                                        <dd
-                                                            class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-                                                        >
-                                                            Orange
-                                                        </dd>
+                                                            <div
+                                                                class="py-3 flex gap-2 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+                                                            >
+                                                                <dt
+                                                                    class="text-sm font-medium text-gray-500"
+                                                                >
+                                                                    Prix :
+                                                                </dt>
+                                                                <dd
+                                                                    class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+                                                                >
+                                                                    XAF 1250
+                                                                </dd>
+                                                            </div>
+                                                            <div
+                                                                class="py-3 flex gap-2 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+                                                            >
+                                                                <dt
+                                                                    class="text-sm font-medium text-gray-500"
+                                                                >
+                                                                    Qté Data
+                                                                </dt>
+                                                                <dd
+                                                                    class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+                                                                >
+                                                                    5Go Valide
+                                                                    22H à 6H
+                                                                </dd>
+                                                            </div>
+                                                            <div
+                                                                class="py-3 flex gap-2 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+                                                            >
+                                                                <dt
+                                                                    class="text-sm font-medium text-gray-500"
+                                                                >
+                                                                    Appel :
+                                                                </dt>
+                                                                <dd
+                                                                    class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+                                                                >
+                                                                    15Min
+                                                                    d'appel tout
+                                                                    réseau
+                                                                </dd>
+                                                            </div>
+                                                            <div
+                                                                class="py-3 flex gap-2 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+                                                            >
+                                                                <dt
+                                                                    class="text-sm font-medium text-gray-500"
+                                                                >
+                                                                    SMS :
+                                                                </dt>
+                                                                <dd
+                                                                    class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
+                                                                >
+                                                                    100 SMS On
+                                                                    net
+                                                                </dd>
+                                                            </div>
+                                                        </dl>
                                                     </div>
-                                                    <div
-                                                        class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
-                                                    >
-                                                        <dt
-                                                            class="text-sm font-medium text-gray-500"
-                                                        >
-                                                            Batterie
-                                                        </dt>
-                                                        <dd
-                                                            class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-                                                        >
-                                                            Duracell
-                                                        </dd>
-                                                    </div>
-                                                    <div
-                                                        class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
-                                                    >
-                                                        <dt
-                                                            class="text-sm font-medium text-gray-500"
-                                                        >
-                                                            Type de Réseau
-                                                        </dt>
-                                                        <dd
-                                                            class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-                                                        >
-                                                            Blue
-                                                        </dd>
-                                                    </div>
-
-                                                    <div
-                                                        class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
-                                                    >
-                                                        <dt
-                                                            class="text-sm font-medium text-gray-500"
-                                                        >
-                                                            Prix
-                                                        </dt>
-                                                        <dd
-                                                            class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-                                                        >
-                                                            XAF 2225
-                                                        </dd>
-                                                    </div>
-
-                                                    <div
-                                                        class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
-                                                    >
-                                                        <dt
-                                                            class="text-sm font-medium text-gray-500"
-                                                        >
-                                                            Image
-                                                        </dt>
-                                                        <dd
-                                                            class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"
-                                                        >
-                                                            <img
-                                                                src="/assets/images/modem_mifi_back.png"
-                                                                alt=""
-                                                            />
-                                                        </dd>
-                                                    </div>
-                                                </dl>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1049,6 +1052,83 @@
 
                         <!--  -->
                         <!-- end modal pour voir la puce -->
+
+                        <!-- modal pour supprimer un produit -->
+
+                        <div
+                            id="DeleteBundleButton"
+                            tabindex="-1"
+                            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                        >
+                            <div
+                                class="relative p-4 w-full max-w-md max-h-full"
+                            >
+                                <div
+                                    class="relative bg-white rounded-lg shadow"
+                                >
+                                    <button
+                                        type="button"
+                                        class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                                        data-modal-hide="DeleteBundleButton"
+                                    >
+                                        <svg
+                                            class="w-3 h-3"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 14 14"
+                                        >
+                                            <path
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                                            />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                    <div class="p-4 md:p-5 text-center">
+                                        <svg
+                                            class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                            />
+                                        </svg>
+                                        <h3
+                                            class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"
+                                        >
+                                            Etes vous sure de vouloir Supprimer
+                                            ce produit ?
+                                        </h3>
+                                        <button
+                                            data-modal-hide="DeleteBundleButton"
+                                            type="button"
+                                            class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2"
+                                        >
+                                            Oui , je suis sure
+                                        </button>
+                                        <button
+                                            data-modal-hide="DeleteBundleButton"
+                                            type="button"
+                                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                                        >
+                                            Non, Annuler
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end modal de suppression -->
 
                         <!-- script import -->
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
