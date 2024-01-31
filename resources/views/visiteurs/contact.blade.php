@@ -25,9 +25,8 @@ $actif="index";
           <h1 class="banner_title">Contacts</h1>
 
           <div class="banner_description">
-            Ici , vous Trouverez tous les informations néccessaire pour
-            contacter les admistrateurs du site. Vous pouvez aussi directement
-            leur laisser un message dépuis le formulaire.
+            {{__('property.contact_title')}}
+            
           </div>
         </div>
       </div>
