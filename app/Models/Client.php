@@ -40,4 +40,19 @@ class Client extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function commandeBouquet(){
+        return $this->hasMany(CommandeBouquet::class);
+    }
+    public function commandeModem(){
+        return $this->hasMany(CommandeModem::class);
+    }
+    public function commandePuce(){
+        return $this->hasMany(CommandePuce::class);
+    }
+    public function commandePack(){
+        return $this->hasMany(CommandePack::class);
+    }
+    public function commandeOffreSpeciale(){
+        return $this->hasMany(CommandeOffreSpeciale::class);
+    }
 }

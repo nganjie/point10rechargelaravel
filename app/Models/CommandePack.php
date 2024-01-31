@@ -22,6 +22,9 @@ class CommandePack extends Model
     public function cloturerCommandePack(){
         return $this->hasOne(CloturerCommandePack::class);
     }
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 
 
 

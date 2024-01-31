@@ -16,6 +16,9 @@ class CommandeBouquet extends Model
     public function cloturerCommandeBouquet(){
         return $this->hasOne(CloturerCommandeBouquet::class,"commande_bouquet_id");
     }
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 }
 
 

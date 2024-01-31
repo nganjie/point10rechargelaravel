@@ -16,5 +16,8 @@ class CommandeOffreSpeciale  extends Model
     public function cloturerOffre(){
         return $this->hasOne(CloturerOffre::class);
     }
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 }
 ?>

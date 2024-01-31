@@ -17,6 +17,9 @@ class CommandePuce extends Model
     public function cloturerCommandePuce(){
         return $this->hasOne(cloturerCommandePuce::class);
     }
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 
     
 }

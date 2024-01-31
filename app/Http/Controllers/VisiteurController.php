@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Client;
+use App\Models\Bouquet;
 use App\Models\Forfait;
 use App\Models\Message;
+use App\Mail\ContactMail;
 use App\Models\Categorie;
 use Illuminate\Http\Request;
 use App\Models\MessageContact;
 use App\Models\CommandeForfait;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\MessageContactRequest;
 use Symfony\Component\Mime\MessageConverter;
 use App\Http\Requests\MessageConctactRequest;
-use App\Mail\ContactMail;
 use App\Notifications\ContactRequestNotification;
-use Illuminate\Support\Facades\Mail;
 
 class visiteurController extends Controller
 {
@@ -28,6 +29,8 @@ class visiteurController extends Controller
     }
    
     public function contact(){
+        $b =Bouquet::find(1);
+        dd($b);
         return view("visiteurs.contact");
     }
     public function test(){

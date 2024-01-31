@@ -16,6 +16,9 @@ class CommandeModem extends Model
     public function cloturerCommandeModem(){
         return $this->hasOne(cloturerCommandeModem::class,"commande_modem_id");
     }
+    public function client(){
+        return $this->belongsTo(Client::class);
+    }
 
     
 }
