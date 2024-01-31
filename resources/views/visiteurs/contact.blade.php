@@ -25,7 +25,7 @@ $actif="index";
           <h1 class="banner_title">Contacts</h1>
 
           <div class="banner_description">
-            {{__('property.contact_title')}}
+            {{__('Here you will find all the necessary information to contact the site administrators. You can also directly leave them a message from the form.')}}
             
           </div>
         </div>
