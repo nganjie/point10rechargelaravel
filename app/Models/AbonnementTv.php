@@ -10,6 +10,10 @@ class AbonnementTv extends Model
     use HasFactory;
     public $table="abonnementtv";
 
+    public function bouquet(){
+        return $this->hasMany(Bouquet::class,"abonnement_id");
+    }
+
     
 }
 ?>

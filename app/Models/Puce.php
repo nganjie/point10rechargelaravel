@@ -10,6 +10,8 @@ class Puce extends Model
     use HasFactory;
     public $table="puce";
 
-    
+    public function CommandePuce(){
+        return $this->hasMany(CommandePuce::class);
+    }
 }
 ?>

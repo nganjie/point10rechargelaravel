@@ -10,6 +10,11 @@ class OffreAbonnement extends Model
     use HasFactory;
     public $table="offre_abonnement";
 
-    
+    public function offre(){
+        return $this->belongsTo(Offre::class);
+    }
+    public function abonnementtv(){
+        return $this->belongsTo(Bouquet::class);
+    }
 }
 ?>

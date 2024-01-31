@@ -10,6 +10,9 @@ class Modem extends Model
     use HasFactory;
     public $table="modem";
 
+    public function commandeModem(){
+        return $this->hasMany(CommandeModem::class,"modem_id");
+    }
     
 }
 ?>

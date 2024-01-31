@@ -9,6 +9,11 @@ class CloturerCommandePack extends Model
 {
     use HasFactory;
     public $table="cloturer_commande_pack";
+    
+    public function commandePack(){
+        return $this->belongsTo(CommandePack::class);
+    }
+
 
     
 }

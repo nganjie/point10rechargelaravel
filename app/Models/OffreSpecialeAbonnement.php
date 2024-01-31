@@ -10,7 +10,9 @@ class OffreSpecialeAbonnement extends Model
     use HasFactory;
     public $table="offre_speciale_abonnement";
 
-    
+    public function offreSpeciale(){
+        return $this->belongsTo(OffreSpeciale::class);
+    }
 }
 
 

@@ -10,6 +10,9 @@ class CloturerOffre extends Model
     use HasFactory;
     public $table="cloturer_offre";
 
+    public function commandeOffreSpeciale(){
+        return $this->belongsTo(CommandeOffreSpeciale::class);
+    }
     
 }
 ?>
