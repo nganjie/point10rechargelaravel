@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\VisiteurController;
 
 Route::prefix("/visiteurs")->name("visiteurs.")->controller(VisiteurController::class)->group(function (){
@@ -14,6 +15,8 @@ Route::prefix("/visiteurs")->name("visiteurs.")->controller(VisiteurController::
     Route::get('creer-compte', 'creer_compte')->name("creer_compte");
     Route::get('Accueil', 'index');
     Route::get('/posts/:id', 'show')->name("show");
+
+    
     
     Route::get('/index.php', 'index');
     Route::get('/show/:id', 'show');
@@ -42,7 +45,7 @@ Route::prefix("admin/")->name("admin.")->controller(Controller::class)->group(fu
     Route::post('/enregistrer_forfait', 'enregistrer_forfait')->name("enregistrer_forfait");
     Route::post('/messages/:id', 'messages_create')->name("messages_create"); 
 });
-
+Route::resource("visiteurs/chat",ChatController::class);
 
  
 
