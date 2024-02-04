@@ -28,8 +28,147 @@
     font-family: "Lexend-Regular";
 }
 body {
-    /* font-size: 1.1rem; */
+    font-size: 1.1rem;
 }
 .pageHide {
     transform: translateX(-100%) !important;
 }
+
+/* ================================== */
+
+/* .modal-container {
+    @apply hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full;
+} */
+
+/* .modal-content {
+    @apply relative p-4 w-full max-w-md max-h-full;
+} */
+
+/* .modal-header {
+    @apply relative bg-white rounded-lg shadow;
+} */
+
+/* .modal-close {
+    @apply absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center;
+} */
+
+/* .modal-close-icon {
+    @apply w-3 h-3;
+} */
+
+/* .modal-body {
+    @apply p-4 md:p-5 text-center;
+} */
+
+/* .modal-icon {
+    @apply mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200;
+} */
+
+/* .modal-title {
+    @apply mb-5 text-lg font-normal text-gray-500 dark:text-gray-400;
+} */
+
+/* .modal-confirm-button {
+    @apply text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2;
+} */
+
+/* .modal-cancel-button {
+    @apply text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover;
+} */
+
+/* Global styles for the container */
+/* .container-puces {
+    @apply rounded border border-neutral-600 bg-white md:col-span-3;
+} */
+
+/* Header styles */
+/* .header-puces {
+    @apply flex flex-col gap-5 p-5 md:flex-row md:items-center;
+} */
+
+/* .header-title {
+    @apply mb-0.5 text-xl text-black;
+} */
+
+/* .header-subtitle {
+    @apply text-sm font-medium text-neutral-500;
+} */
+
+/* Table wrapper styles */
+/* .table-wrapper {
+    @apply relative overflow-x-auto shadow-md sm:rounded-lg;
+} */
+
+/* Table styles */
+/* .puces-table {
+    @apply w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400;
+} */
+
+/* .table-header {
+    @apply text-xs text-gray-700 uppercase bg-gray-50;
+} */
+
+/* .table-row {
+    @apply bg-white border-b hover:bg-gray-50;
+} */
+
+/* .table-cell {
+    @apply px-6 py-4;
+} */
+
+/* .table-cell-bold {
+    @apply font-medium text-gray-900 whitespace-nowrap;
+} */
+
+/* .table-cell-actions {
+    @apply flex items-center px-6 py-4;
+} */
+
+/* Button styles */
+/* .button-voir {
+    @apply font-medium text-blue-600 dark:text-blue-500 hover:underline;
+} */
+
+/* .link-modifier {
+    @apply font-medium text-red-600 dark:text-red-500 hover:underline ms-3;
+} */
+
+/* .button-supprimer {
+    @apply font-medium text-red-600 dark:text-red-500 hover:underline ms-3;
+} */
+
+/* Global footer styles */
+/* .footer {
+    @apply flex grow-0 items-center border-t border-neutral-600 bg-white mt-8;
+} */
+
+/* Container for footer content */
+/* .footer-container {
+    @apply container mx-auto flex flex-col space-y-2 px-4 py-6 text-center text-sm font-medium text-neutral-600 md:flex-row md:justify-between md:space-y-0 md:text-start lg:px-8 xl:max-w-7xl;
+} */
+
+/* Copyright information */
+/* .footer-copyright {
+} */
+
+/* Brand name in the copyright */
+/* .footer-brand {
+    @apply font-semibold;
+} */
+
+/* Credits section */
+/* .footer-credits {
+    @apply inline-flex items-center justify-center;
+} */
+
+/* Heart icon */
+/* .footer-heart-icon {
+    @apply mx-1 h-4 w-4 text-red-600;
+} */
+
+/* Link to the creator's website */
+/* .footer-link {
+    @apply font-medium text-blue-600 transition hover:text-blue-700;
+} */
+
+/* ========================= */
