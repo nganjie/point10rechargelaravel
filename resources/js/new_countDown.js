@@ -1,6 +1,18 @@
+import './bootstrap.js';
 import { generateurPDF } from "../js/createPdf.js";
 import { launch_toast } from "../js/toast.js";
 //function decompteEn5Minutes() {
+ /* window.Echo.channel("chat")
+.listen(".chat-message",(event)=>{
+    console.log(event);
+  
+})*/
+window.Echo.channel("commande")
+ .listen(".commande-valider",(event)=>{
+     console.log(event);
+     console.log("un monde de merde ici bas")
+ })
+ /*
   const duree = 60000*5;
   let tempsRestant = duree;
   function mettreAJourDecompte() {
@@ -46,16 +58,7 @@ import { launch_toast } from "../js/toast.js";
     }
   }
 
- /* let intervalle = setInterval(mettreAJourDecompte, 1000);
 
-  function arreterDecompte() {
-    clearInterval(intervalle);
-    const tempsRestantElement = document.getElementById("temps-restant");
-    if (tempsRestantElement) {
-      tempsRestantElement.innerHTML = "Le décompte est arrêté.";
-    }
-  }*/
-//}
 console.log(document.querySelector("#temps-restant"))
 
 //decompteEn5Minutes();
@@ -76,7 +79,7 @@ console.log(min)
 form_command.addEventListener("submit",(e)=>{
   e.preventDefault();
  // decompteEn5Minutes();
- if(form_commande['name'].value&&form_commande['email'].value&&form_commande['phone_number'].value&&form_commande['pay_number'].value&&form_commande['transaction_number'].value&&form_commande['whatsap-number'].value)
+ if(form_commande['name'].value&&form_commande['email'].value&&form_commande['phone_number'].value&&form_commande['pay_number'].value&&form_commande['transaction_number'].value&&form_commande['whatsap_number'].value)
  {
   
  function arreterDecompte() {
@@ -118,49 +121,21 @@ form_command.addEventListener("submit",(e)=>{
  })
  setTimeout(()=>{
    var intervalle = setInterval(mettreAJourDecompte, 1000);
-  let confirm= setInterval(()=>{
-     fetch("../php/api.php",{
-       method:"POST",
-       body:new FormData(document.getElementById("cache"))
-     }).then(res=>res.text())
-     .then((data)=>{
-       console.log(data);
-     /*  fm.style.display="none";
-       generateurPDF("#multi_step_section","fecture-forfait-point10recharge");
-       generateurPDF("#preview","fecture-forfait-point10recharge");*/
-       
 
-       
-       if(Number(data)==2)
-       {
-         telecharger.style.visibility="visible"
-         min.innerHTML+=`<p style="color:blue">votre forfait à été activé avec success</p>`;
-       launch_toast("votre forfait à été activé avec success","success");
-         console.log(" un nouveau monde souvre à moi");
-         //div_error.innerHTML=data;
-         clearInterval(intervalle);
-         clearInterval(confirm);
-         
-         
-         
-       }else if(Number(data)==3)
-       {
-        min.innerHTML+=`<p style="color:red">votre forfait à été rejeté</p>`;
-        launch_toast("votre forfait à été rejeté","error");
-          console.log(" un nouveau monde souvre à moi");
-          //div_error.innerHTML=data;
-          clearInterval(intervalle);
-          clearInterval(confirm);
-       }else{
-         console.log("rien ne va ici bas");
-       }
-       //clearInterval(confirm);
-       //clearInterval(t);
-     })
-   },5000)
+
+
+
  },5000)
- }
+ }*/
+ /*window.Echo.channel("commande")
+ .listen(".commande-valider",(event)=>{
+     console.log(event);
+     console.log("un monde de merde ici bas")
+ })*/
+/* axios.post("./chat",{
+  name:"une merde",
+  message:"message value"
+})
 
 
-
-});
+});*/

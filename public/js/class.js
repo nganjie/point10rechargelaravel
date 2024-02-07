@@ -63,9 +63,9 @@ export class Caracteristique{
 export class Forfait{
     constructor(tab){
         this.id=Number(tab.id);
-        this.nom=tab.nom;
+        this.nom=tab.categorie.nom;
         this.nb_go=Number(tab.nb_go);
-        this.taille=tab.taille;
+        this.taille=tab.taille.nom;
         this.type=tab.type;
         this.prix=Number(tab.prix);
         this.description=new Caracteristique(tab.description);

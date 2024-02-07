@@ -2,9 +2,7 @@
   @php
   $type="danger"
   @endphp
-  <x-alert :type="$type" id="test" class="dedicate">
-    un monde de merde ici bas
-  </x-alert>
+
       <!-- menu for small vp -->
       <nav aria-label="mobile-menu" id="mobile-menu" class="mobile-menu-close">
         <div class="close_mobile_section">

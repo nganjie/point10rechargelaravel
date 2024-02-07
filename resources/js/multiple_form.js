@@ -87,7 +87,7 @@ submit_btn.addEventListener("click",(e)=>{
   }
 })
 //if(commandeForm[''].value&&commandeForm[''].value&&commandeForm[''].value&&commandeForm[''].value)
-/*
+
   console.log(singleForms, btnsPrev, btnsNext, list);
 
   btnsNext.forEach(function (elt, ind) {
@@ -149,7 +149,7 @@ submit_btn.addEventListener("click",(e)=>{
         }
       });
     });
-  });*/
+  });
 });
 
 /*else{

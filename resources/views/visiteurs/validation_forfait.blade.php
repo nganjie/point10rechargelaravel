@@ -13,10 +13,12 @@ $actif="index";
     <link rel="stylesheet" href="{{asset('css/countdown.css')}}" />
     <link rel="stylesheet" href="{{asset('css/toast.css')}}" />
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-  
+    
   <script type="module" src="{{asset('js/multiple_form.js')}}" defer></script>
     <script type="module" src="{{asset('js/createPdf.js')}}" defer></script>
-    <script type="module" src="{{asset('js/new_countDown.js')}}" defer></script>
+    
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
 @section('content')
@@ -43,14 +45,14 @@ $actif="index";
               </li>
             </ul>
 
-            <div class="single-form" id="info-div">
+            <div class="single-form " id="info-div">
               <span> Informations Personnelles </span>
-              <div class="input-group" id="info-div">
+              <div class="input-group" >
                 <label for="name">Nom : </label
                 ><input
                   type="text"
                   class="user-name input-field"
-                  value="// (est_connecter())?$_SESSION['nom']:"
+                  value="{{(session('nom'))? session("nom"):""}}"
                   placeholder="Votre nom : "
                   name="name"
                   id="name"
@@ -62,20 +64,20 @@ $actif="index";
                   type="email"
                   class="user-email input-field"
                   id="email"
-                  value="// (est_connecter())?$_SESSION['email']:"
+                  value="{{(session('email'))? session("email"):""}}"
                   placeholder="Adresse email"
                   name="email"
                 />
               </div>
               <div class="input-group">
-                <label for="nom-entreprise">Nom de l'entreprise(facultatif) : </label
+                <label for="nom_entreprise">Nom de l'entreprise(facultatif) : </label
                 ><input
                   type="text"
                   class="user-entreprise input-field"
-                  id="nom-entreprise"
+                  id="nom_entreprise"
                   
                   placeholder="Nom de l'entreprise"
-                  name="nom-entreprise"
+                  name="nom_entreprise"
                 />
               </div>
               <div class="input-group">
@@ -95,9 +97,9 @@ $actif="index";
                   id="whatsapp_number"
                   type="number"
                   class="user-date input-field"
-                  value="// (est_connecter())?$_SESSION['numero']:"
+                  value="{{(session('numero'))? session("numero"):""}}"
                   placeholder="Numéro whatsapp"
-                  name="whatsap-number"
+                  name="whatsap_number"
                 />
               </div>
               <div class="btn-container">
@@ -190,14 +192,18 @@ $actif="index";
               
               <div class="btn-container">
                 <input type="text" name="query" value="commande_forfait" style="display:none"/>
-                <input type="number" name="id_forfait" value=" $params['forfait']" style="display:none"/>
-                <input type="number" name="id_client" value="<?= isset($_SESSION['id'])?$_SESSION['id']:0 ?>" style="display:none"/>
+                <input type="number" name="id_commande" value="" style="display:none"/>
+                <input type="number" name="id_forfait" value="{{$forfait->id}}" style="display:none"/>
+                <input type="number" name="id_client" value="{{(session('id'))? session("id"):""}}" style="display:none"/>
                 <button class="btn prev" type="button">Précédent</button
                 ><button class="btn next" type="submit" id="submit-btn">Validé</button>
               </div>
             </div>
           </form>
-          <div id="error"></div>
+          <div id="toast" style="display: none;">
+            <div id="img">Icon</div>
+            <div id="desc">A notification message..</div>
+          </div>
           <!-- Confirmation de la commande  -->
           <div class="single-form hide" id="confirm-div">
             <span> Confirmation de la commande </span>
@@ -239,6 +245,9 @@ $actif="index";
 @endsection
 @section("js")
     <!-- js file -->
-    <script type="module" src="{{asset('js/valider_commande.js')}}"></script>
+    @vite('resources/js/new_countDown.js')
+    @vite('resources/js/valider_commande.js')
+    
+    
 
 @endsection

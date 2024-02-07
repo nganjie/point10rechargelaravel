@@ -10,9 +10,9 @@ tab_filter["nom"]="BLUE NOUS";
 tab_filter['nb_go']=50;
 console.log(form);
 console.log("un monde de fou ici")
-/*fetch("php/api.php",{
-    method:"POST",
-    body:new FormData(document.getElementById("form-id"))
+fetch("./api/forfaits",{
+    method:"GET",
+    //body:new FormData(document.getElementById("form-id"))
 }).then(res =>res.json())
 .then((data)=>{
     //console.log(data);
@@ -56,4 +56,4 @@ console.log("un monde de fou ici")
 
     })
 
-})*/
+})

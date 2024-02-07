@@ -22,15 +22,14 @@ class visiteurController extends Controller
 {
     //
     public function index(){
-        $forfait =new MessageContact();
-        $result =$forfait->all();
+        
         //var_dump($result);
+        $f=Forfait::with("categorie")->get()->whereBetween("nb_go",[10,20])->groupBy("categorie.nom");
+        dd($f);
         return view("visiteurs.index");
     }
    
     public function contact(){
-        $b =Bouquet::find(1);
-        dd($b);
         return view("visiteurs.contact");
     }
     public function test(){

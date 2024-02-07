@@ -11,6 +11,18 @@ class CommandeForfait extends Model
     use HasFactory;
     public $table="commande_forfait";
 
+    public $fillable=[
+        "nom",
+        "email",
+        "numero_benefice",
+        "numero_payement",
+        "nom_entreprise",
+        "numero_whatsapp",
+        "operateur_payement",
+        "numero_transaction",
+        "client_id",
+        "forfait_id"
+    ];
     public function forfait(){
         return $this->belongsTo(Forfait::class);
     }

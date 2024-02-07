@@ -52,19 +52,27 @@ document.addEventListener("DOMContentLoaded", function (e) {
   var info_btn=document.getElementById("info-btn");
 var submit_btn=document.getElementById("submit-btn");
 var commandeForm=document.getElementById("valid-form");
+var regexNumber=/^6([0-9]){8}$/
+var regexCamtel=/^62([0-9]){7}$/
 info_btn.addEventListener("click",(e)=>{
   console.log("cela marche bien");
   console.log(commandeForm);
   console.log(infodiv);
   if(commandeForm['name'].value&&commandeForm['email'].value&&commandeForm['phone_number'].value&&commandeForm['whatsapp_number'].value)
   {
-    infodiv.classList.add("hide");
+    if(String(commandeForm['phone_number'].value).match(regexCamtel)&&String(commandeForm['whatsapp_number'].value).match(regexNumber)){
+      infodiv.classList.add("hide");
       console.log(list)
       list[0].classList.add("inactive");
       list[0].classList.remove("active");
       submitdiv.classList.remove("hide")
       list[1].classList.remove("inactive");
       list[1].classList.add("active");
+    }else{
+      launch_toast("veillez renseignez un numéro correcte","error");
+      
+    }
+    
       
   }else{
     launch_toast("veillez renseignez tous les champs","error");
@@ -74,13 +82,19 @@ submit_btn.addEventListener("click",(e)=>{
   //e.preventDefault();
   if(commandeForm['methode'].value&&commandeForm['pay_number'].value&&commandeForm['transaction_number'].value)
   {
-    submitdiv.classList.add("hide");
+    if(String(commandeForm['pay_number'].value).match(regexNumber))
+    {
+      submitdiv.classList.add("hide");
       console.log(list)
       list[1].classList.add("inactive");
       list[1].classList.remove("active");
       confirmdiv.classList.remove("hide")
       list[2].classList.remove("inactive");
       list[2].classList.add("active");
+    }else{
+      launch_toast("veillez renseignez un numéro correcte","error");
+    }
+    
       
   }else{
     launch_toast("veillez renseignez tous les champs","error");

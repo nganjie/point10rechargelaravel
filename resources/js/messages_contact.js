@@ -1,3 +1,4 @@
+import './bootstrap.js';
 var form =document.getElementById("form-cache");
 
 
@@ -148,3 +149,8 @@ document.addEventListener("keyup", (e) => {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }
 });
+window.Echo.channel("chat")
+.listen(".chat-message",(event)=>{
+    console.log(event);
+  
+})

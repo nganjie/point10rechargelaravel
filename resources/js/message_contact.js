@@ -1,5 +1,5 @@
-
-console.log("cela marche fort bien");
+import './bootstrap.js';
+/*console.log("cela marche fort bien");
 const form =document.getElementById("message_form");
 console.log(form);
 
@@ -12,8 +12,11 @@ form.addEventListener("submit",(e)=>{
     }else{
         console.log("veillez remplir tous les champs");
     }
-   /* for(var i=0;i<form.length;i++)
-    {
-        console.log(form[i].value);
-    }*/
-})
+
+})*/
+
+window.Echo.channel("commande")
+ .listen(".commande-valider",(event)=>{
+     console.log(event);
+     console.log("un monde de merde ici bas")
+ })

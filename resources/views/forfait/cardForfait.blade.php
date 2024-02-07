@@ -1,5 +1,5 @@
 
-    <a href="details-forfait/{{$forfait->id}}" class="bundle_item">
+    <a href="details-{{$forfait->id}}" class="bundle_item">
                   <div class="bundle_item_content">
                     <div class="image">
                       <img src="{{asset('media/images/blue.png')}}" alt="" />

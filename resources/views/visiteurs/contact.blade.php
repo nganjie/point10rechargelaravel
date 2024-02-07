@@ -12,7 +12,7 @@ $actif="index";
     <!-- <script src="../../js/toast.js" defer></script> -->
 
     <script src="{{asset('js/mobile_menu.js')}}" defer></script>
-  <script src="{{asset('js/message_contact.js')}}" defer></script>
+  
 @endsection
 @section('content')
 
@@ -64,5 +64,7 @@ $actif="index";
 @endsection
 @section("js")
     <!-- js file -->
+    
+    @vite('resources/js/message_contact.js')
 
 @endsection
